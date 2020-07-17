@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+#modal-window {
+  position: absolute;
+  width: 99%;
+  top: 0px;
+  right: 0px;
+  z-index: 99999;
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-window {
+  width: 350px;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  will-change: transform;
+  background: #F9F9F9;
+  border-radius: 3px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.25);
+  z-index: 9999;
+}
+
+.modal-handle {
+  padding: 15px;
+  cursor: move;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meeting-title {
+  font-size: 16px;
+  margin: 0px;
+  color: rgba(0,0,0,.87);
+}
+
+.download-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  opacity: .87;
+  background-color: rgba(95,99,104,0.157);
+}
+
+.download-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #666666;
+}
+
+.modal-content-drawer-handle {
+  height: 100%;
+  width: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-editor.ql-blank::before {
+  font-style: normal !important;
+}
+
+.ql-container {
+  font-size: 14px !important;
+}
+

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Fidisys Meeting Notes",
+  "description": "Capture video meetings as a text file without opening new tab or app",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_title": "Fidisys Meeting Notes"
+  },
+  "background": {
+    "scripts": ["./jquery.js", "background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "all_frames": true,
+    "js": [
+      "./content.js",
+      "./jquery.js"
+    ],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "activeTab"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "index.html",
+    "/static/*"
+  ]
+}
